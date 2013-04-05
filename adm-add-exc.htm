@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta charset="utf-8">
+        <title>MAKE.TRAVEL</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/themes/base/jquery-ui.css"/> -->
+        <link rel="stylesheet" type="text/css" href="css/mtadmin.css">
+
+        <link rel="shortcut icon" href="ico/favicon.png"/>
+    </head>
+
+    <body>
+
+        <!-- Модальное окно подтверждения удаления (скрытое) -->
+        <div id="cancel" class="modal hide">
+            <div align="center" class="modal-body">
+                <h4>Are you sure to delete?</h4><br />
+                <a href="#" class="btn" data-dismiss="modal" >Cancel</a>
+                <a href="#" class="btn">Delete</a>
+            </div>
+        </div>
+
+        <!-- Модальное окно добавления видео (скрытое) -->
+        <div id="addvideo" class="modal hide">
+            <div class="modal-body modal-add-video">
+                <div class="mod-header">
+                    Input a link from <a href="http://www.youtube.com"><b>youtube.com</b></a> or from <a href="http://www.vimeo.com"><b>vimeo.com</b></a>
+                </div>
+                <div class="mod-input">
+                    <input type="text" placeholder="For example, www.youtube.com/watch?v=B0ky-VMi9fI"></input>
+                </div>
+                <div class="mod-button">
+                    <a href="#" class="btn" data-dismiss="modal" >Cancel</a>
+                    <a href="#" class="btn">Save</a>
+                </div>
+                <div class="mod-alert">Bad link. Please try another one.</div>
+            </div>
+        </div>
+
+        <!-- шапка -->
+        <div class="header">
+            <div class="header-ins">
+                <div class="logo"><a href="adm-index.htm" class="brand" ><img src="ico/logo.png"></a></div>
+                <div class="left-menu">
+                    <div class="he-link">
+                        <a class="active" href="#">Link 1</a>
+                    </div>
+                    <div class="he-link">
+                        <a href="#">Link 2</a>
+                    </div>
+                    <div class="he-link">
+                        <a href="#">Link 3</a>
+                    </div>
+                    <div class="he-link">
+                        <a href="#">Link 4</a>
+                    </div>
+                    <div class="he-link">
+                        <a href="#">Link 5</a>
+                    </div>
+                </div>
+                <div class="right-menu">
+                    <div class="dropdown pull-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Zhuravlev A<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">My profile</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="container-in">
+                <!--хлебные крошки -->
+                <div class="breadcrumb">
+                    <ul class="">
+                        <li>SysOp</li>
+                        <span class="divider">/</span>
+                        <li><a href="adm-exc.htm">Excursions</a></li>
+                        <span class="divider">/</span>
+                        <li class="active">Edit excursion</li>
+                    </ul>
+                </div>
+                <!--фильтры -->
+                <div class="filters">
+                </div>
+                <!-- центральный блок -->
+                <div class="main-container">
+
+                    <!-- левое меню -->
+                    <div class="left-block">
+                        <ul class="nav nav-tabs nav-stacked">
+                            <li><a href="adm-country.htm">Countries</a></li>
+                            <li><a href="adm-regions.htm">Regions</a></li>
+                            <li><a href="adm-katexc.htm">Excursion categories</a></li>
+                            <li class="active-menu"><a href="adm-exc.htm">Excursions</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- правый блок -->
+                    <div class="right-block">
+                        <div class="add-exc">
+                            <div class="header-cont">Information of the company</div>
+                            <div class="add-exc-compinfo">
+                                <div class="infocomp">Company name:</div><span class="textcomp">Roga and Kopita Co.,Ltd.</span><br>
+                                <div class="infocomp">Country:</div><span class="textcomp">Thailand</span><br>
+                                <div class="infocomp">Region:</div><span class="textcomp">Phuket</span><br>
+                                <div class="infocomp">Recent edition of the excursion:</div><span class="textcomp">01.01.2013</span><br>
+                            </div>
+                            <div class="header-cont">Select the category of the excursion</div>
+                            <div class="add-status">
+                                <select>
+                                    <option>Not selected</option>
+                                    <option>Phi Phi Islands</option>
+                                    <option>Similan Islands</option>
+                                </select>
+                            </div>
+                            <div class="header-cont">Title of the excursion</div>
+                            <div class="add-exc-name">
+                                <div class="name-exc">English name</div>
+                                <span class="name-exc-input uneditable-input">Similan Islands + Bamboo Islands + snorkeling</span>
+                            </div>
+                            <div class="add-exc-name">
+                                <div class="name-exc"><img class="flag" src="ico/ru.png"> French</div>
+                                <input type="text" class="name-exc-input">
+                            </div>
+                            <div class="header-cont">Description of the excursion</div>
+                            <div class="add-exc-name">
+                                <div class="name-exc"><img class="flag" src="ico/ru.png"> French</div>
+                                <textarea class="resize text-a"></textarea>
+                            </div>
+                            <div class="header-cont">Schedule of the excursion ( <img class="flag" src="ico/ru.png"> French )</div>
+                            <div class="add-exc-shed">
+                                <div class="day-shed-exc">Day 1</div>
+                                <input type="text" class="shed-exc-time"><input type="text" class="shed-exc-text"><a data-toggle="modal" href="#cancel" class="close del-time">&times;</a><br/>
+                                <input type="text" class="shed-exc-time"><input type="text" class="shed-exc-text"><a data-toggle="modal" href="#cancel" class="close del-time">&times;</a><br/>
+                                <div class="day-shed-exc">Day 2</div>
+                                <input type="text" class="shed-exc-time"><input type="text" class="shed-exc-text"><a data-toggle="modal" href="#cancel" class="close del-time">&times;</a><br/>
+                                <input type="text" class="shed-exc-time"><input type="text" class="shed-exc-text"><a data-toggle="modal" href="#cancel" class="close del-time">&times;</a><br/>
+                            </div>
+                            <div class="header-cont">Photos (Gallery)
+                            </div>
+                            <div class="add-exc-foto">
+                                <div class="exc-foto-box">
+                                    <div class="exc-foto-descr"><img class="flag" src="ico/en.png"> ENG</div>
+                                    <input type="text" class="foto-exc-input" placeholder="Please enter description for foto">
+                                    <br />
+                                    <div class="exc-foto-descr"><img class="flag" src="ico/ru.png"> FRA</div>
+                                    <input type="text" class="foto-exc-input" placeholder="Please enter description for foto">
+                                </div>
+                                <div class="exc-foto">
+									<a href="#"><img src="img/adm-foto/01.jpg"></a>
+									<a data-toggle="modal" href="#cancel" class="del-foto del-media">&times;</a>
+								</div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="header-cont">Videos
+                                <div class="button-head-a"><a data-toggle="modal" href="#addvideo" class="btn btn-mini">Add video</a></div>
+                            </div>
+                            <div class="add-exc-foto">
+                                <div class="exc-foto-box">
+                                    <div class="exc-foto-descr"><img class="flag" src="ico/en.png"> ENG</div>
+                                    <input type="text" class="foto-exc-input" placeholder="Please enter description for foto">
+                                    <br />
+                                    <div class="exc-foto-descr"><img class="flag" src="ico/ru.png"> FRA</div>
+                                    <input type="text" class="foto-exc-input" placeholder="Please enter description for foto">
+                                </div>
+                                <div class="exc-foto">
+									<a href="#"><img src="img/adm-foto/01.jpg"></a>
+									<a data-toggle="modal" href="#cancel" class="del-foto del-media">&times;</a>
+								</div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="header-cont">We reccomend (Right panel)
+                                <div class="button-head"><button class="btn btn-mini" type="submit">Add reccomends</button></div>
+                            </div>
+                            <div class="add-exc-rek">It works as a rating sequence now</div>
+                            <div class="header-cont">Moderator comments (Service information)</div>
+                            <div class="add-comment">
+                                <textarea class="resize text-full"></textarea>
+                            </div>
+                            <div class="header-cont">Status of the excursion</div>
+                            <div class="add-status">
+                                <select>
+                                    <option>For moderation</option>
+                                    <option>Approved</option>
+                                    <option>Failed</option>
+                                </select>
+                            </div>
+                            <div class="add-comment">
+                                <textarea class="resize text-full">Class "hide" hides the element</textarea>
+                            </div>
+                            <div class="header-cont">Recent changes (Service information)</div>
+                            <div class="add-log">
+                                01.01.2013 - Page created - Zhuravlev Alexander<br>
+                                02.01.2013 - Edit description in Russian - Zhuravlev Alexander<br>
+                                02.01.2013 - Add photo - Zhuravlev Alexander<br>
+                                02.01.2013 - Changed status on "Approved" - Zhuravlev Alexander<br>
+                            </div>
+                            <div class="button">
+                                <button class="btn btn-large" type="submit">Cancel</button>
+                                <button class="btn btn-large" type="submit">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <!-- футер -->
+                <div class="footer">
+                    <div class="line"></div>
+                    <div class="text"><a href="http://make.travel/">MAKE.TRAVEL</a>&nbsp;&nbsp;|&nbsp;&nbsp;Professional Travel System&nbsp;&nbsp;©&nbsp;&nbsp;2012 - 2013</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Jquery -->
+        <script src="js/jquery.js"></script>	
+
+        <!-- Выпадающий список -->		
+        <script src="js/bootstrap-dropdown.js"></script>
+
+        <!-- Модальные окна -->
+        <script src="js/bootstrap-modal.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta charset="utf-8">
+        <title>MAKE.TRAVEL</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/themes/base/jquery-ui.css"/> -->
+        <link rel="stylesheet" type="text/css" href="css/mtadmin.css">
+
+        <link rel="shortcut icon" href="ico/favicon.png"/>
+    </head>
+
+    <body>
+
+        <!-- шапка -->
+        <div class="header">
+            <div class="header-ins">
+                <div class="logo"><a href="adm-index.htm" class="brand" ><img src="ico/logo.png"></a></div>
+                <div class="left-menu">
+                    <div class="he-link">
+                        <a class="active" href="#">Link 1</a>
+                    </div>
+                    <div class="he-link">
+                        <a href="#">Link 2</a>
+                    </div>
+                    <div class="he-link">
+                        <a href="#">Link 3</a>
+                    </div>
+                    <div class="he-link">
+                        <a href="#">Link 4</a>
+                    </div>
+                    <div class="he-link">
+                        <a href="#">Link 5</a>
+                    </div>
+                </div>
+                <div class="right-menu">
+                    <div class="dropdown pull-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Zhuravlev A<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">My profile</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="container-in">
+                <!--хлебные крошки -->
+                <div class="breadcrumb">
+                    <ul class="">
+                        <li>Zhuravlev A</li>
+                        <span class="divider">/</span>
+                        <li class="active">Excursion categories</li>
+                    </ul>
+                </div>
+                <!--фильтры -->
+                <div class="filters">
+                    <div class="statuses-sel">
+                        <select class="size">
+                            <option>All statuses</option>
+                            <option>For moderate</option>
+                            <option>Approved</option>
+                            <option>Failed</option>
+                        </select>
+                    </div>
+                    <div class="country-sel">
+                        <select class="size">
+                            <option>All countries</option>
+                            <option>Russia</option>
+                            <option>England</option>
+                            <option>Thailand</option>
+                            <option>Finland</option>
+                        </select>
+                    </div>
+                    <div class="regions-sel">
+                        <select class="size">
+                            <option>All regions</option>
+                            <option>Phuket</option>
+                            <option>Pataya</option>
+                            <option>Krabi</option>
+                            <option>Samui</option>
+                        </select>
+                    </div>
+                    <div class="search">
+                        <form class="form-search">
+                            <input type="text" class="input-medium search-query nonb" placeholder="Search">
+                        </form>
+                    </div>
+                    <div class="reset-sel">
+                        <a href="#">Clear</a>
+                    </div>
+                    <div class="apply-sel">
+                        <a href="#">Apply</a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <!-- центральный блок -->
+                <div class="main-container">
+
+                    <!-- левое меню -->
+                    <div class="left-block">
+                        <ul class="nav nav-tabs nav-stacked">
+                            <li><a href="adm-country.htm">Countries</a></li>
+                            <li><a href="adm-regions.htm">Regions</a></li>
+                            <li class="active-menu"><a href="adm-katexc.htm">Excursion categories</a></li>
+                            <li><a href="adm-exc.htm">Excursions</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- правый блок -->
+                    <div class="right-block">
+                        <div class="tabbable">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#moderation" data-toggle="tab">On website <span class="badge-tabs">2</span></a></li>
+                                <li><a href="#off" data-toggle="tab">Not on website <span class="badge-tabs">2</span></a></li>
+                                <div class="button"><a href="adm-add-katexc.htm" class="btn">Add new category</a></div>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="moderation">
+                                    <div class="katexc">
+                                        <div class="modul">
+                                            <div class="country1">Thailand</div>
+                                            <div class="regions1">Phuket</div>
+                                            <div class="block"><div class="exc"><i class="badge-cont badge-cont-success" title="success">&nbsp;</i><a href="#">Rafting</a></div></div>
+                                            <div class="block"><div class="exc"><i class="badge-cont badge-cont-cancel" title="cancel">&nbsp;</i><a href="#">Diving</a></div></div>
+                                            <div class="regions1">Патая</div>
+                                            <div class="block"><div class="exc"><i class="badge-cont" title="moderation">&nbsp;</i><a href="#">Rafting</a></div></div>
+                                        </div>
+                                        <div class="modul">
+                                            <div class="country1">Россия</div>
+                                            <div class="regions1">Москва</div>
+                                            <div class="block"><div class="exc"><i class="badge-cont badge-cont-success" title="success">&nbsp;</i><a href="#">Diving</a></div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="off">
+                                    <div class="katexc">
+                                        <div class="modul">
+                                            <div class="country1">Thailand</div>
+                                            <div class="regions1">Phuket</div>
+                                            <div class="block"><div class="exc"><i class="badge-cont badge-cont-success" title="success">&nbsp;</i><a href="#">Rafting</a></div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="on">
+                                    <div class="katexc">
+                                        <div class="modul">
+                                            <div class="country1">Thailand</div>
+                                            <div class="regions1">Phuket</div>
+                                            <div class="block"><div class="exc"><a href="#">Круиз по Андаманскому морю: Краби, Джеймс Бонд, Пхи-Пхи. 2 дня и 1 ночь</a></div></div>
+                                            <div class="block"><div class="exc"><a href="#">Экскурсия на острова Пхи-Пхи</a></div></div>
+                                            <div class="block"><div class="exc"><a href="#">Экскурсия на остров Джеймса Бонда</a></div></div>
+                                            <div class="block"><div class="exc"><a href="#">Экскурсия на Симиланские острова</a></div></div>
+                                            <div class="block"><div class="exc"><a href="#">Экскурсия в национальный парк Као Лак</a></div></div>
+                                            <div class="block"><div class="exc"><a href="#">Экскурсия в национальный парк Као Сок и на озеро Чиеолан (2 дня и 1 ночь)</a></div></div>
+                                            <div class="regions1">Патая</div>
+                                            <div class="block"><div class="exc"><a href="#">Река Квай</a></div></div>
+                                            <div class="block"><div class="exc"><a href="#">Аюттая+ река Квай + Эраван</a></div></div>
+                                            <div class="block"><div class="exc"><a href="#">Золотой треугольник</a></div></div>
+                                            <div class="block"><div class="exc"><a href="#">Купание с дельфинами</a></div></div>
+                                            <div class="block"><div class="exc"><a href="#">Дискавери тур + тигровый зоопарк + зоопарк Кхао Кхео</a></div></div>
+                                            <div class="block"><div class="exc"><a href="#">Кокосовая лагуна (2д/1н)</a></div></div>
+                                            <div class="block"><div class="exc"><a href="#">Остров Ко Чанг</a></div></div>
+                                        </div>
+                                        <div class="modul">
+                                            <div class="country1">Россия</div>
+                                            <div class="regions1">Санкт-Петербург</div>
+                                            <div class="block"><div class="exc"><a href="#">Обзорная экскурсия</a></div></div>
+                                            <div class="block"><div class="exc"><a href="#">Пушкин (Царское Село)</a></div></div>
+                                            <div class="block"><div class="exc"><a href="#">Стрельна. Константиновский дворец</a></div></div>
+                                            <div class="regions1">Москва</div>
+                                            <div class="block"><div class="exc"><a href="#">Обзорная экскурсия по Москве</a></div></div>
+                                            <div class="block"><div class="exc"><a href="#">Экскурсия в Третьяковскую галерею</a></div></div>
+                                            <div class="block"><div class="exc"><a href="#">Поездка в аквапарк - "Ква Ква парк"</a></div></div>
+                                            <div class="block"><div class="exc"><a href="#">Экскурсия на киностудию "Мосфильм"</a></div></div>
+                                            <div class="block"><div class="exc"><a href="#">Экскурсия в панораму Бородинская битва</a></div></div>
+                                            <div class="block"><div class="exc"><a href="#">Экскурсия в Музей В.О.В. Поклонная гора</a></div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <!-- футер -->
+                <div class="footer">
+                    <div class="line"></div>
+                    <div class="text"><a href="http://make.travel/">MAKE.TRAVEL</a>&nbsp;&nbsp;|&nbsp;&nbsp;Professional Travel System&nbsp;&nbsp;©&nbsp;&nbsp;2012 - 2013</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Jquery -->
+        <script src="js/jquery.js"></script>
+
+        <!-- Табы -->
+        <script src="js/bootstrap-tab.js"></script>		
+
+        <!-- Выпадающий список -->		
+        <script src="js/bootstrap-dropdown.js"></script>
+
+    </body>
+</html>

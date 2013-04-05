@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta charset="utf-8">
+        <title>MAKE.TRAVEL</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/themes/base/jquery-ui.css"/> -->
+        <link rel="stylesheet" type="text/css" href="css/mtadmin.css">
+
+        <link rel="shortcut icon" href="ico/favicon.png"/>
+    </head>
+
+    <body>
+
+        <!-- шапка -->
+        <div class="header">
+            <div class="header-ins">
+                <div class="logo"><a href="adm-index.htm" class="brand" ><img src="ico/logo.png"></a></div>
+                <div class="left-menu">
+                    <div class="he-link">
+                        <a class="active" href="#">Link 1</a>
+                    </div>
+                    <div class="he-link">
+                        <a href="#">Link 2</a>
+                    </div>
+                    <div class="he-link">
+                        <a href="#">Link 3</a>
+                    </div>
+                    <div class="he-link">
+                        <a href="#">Link 4</a>
+                    </div>
+                    <div class="he-link">
+                        <a href="#">Link 5</a>
+                    </div>
+                </div>
+                <div class="right-menu">
+                    <div class="dropdown pull-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Zhuravlev A<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">My profile</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="container-in">
+                <!--хлебные крошки -->
+                <div class="breadcrumb">
+                    <ul class="">
+                        <li>Zhuravlev A</li>
+                        <span class="divider">/</span>
+                        <li><a href="adm-regions.htm">Regions</a></li>
+                        <span class="divider">/</span>
+                        <li class="active">Edit region</li>
+                    </ul>
+                </div>
+                <!--фильтры -->
+                <div class="filters">
+                </div>
+                <!-- центральный блок -->
+                <div class="main-container">
+
+                    <!-- левое меню -->
+                    <div class="left-block">
+                        <ul class="nav nav-tabs nav-stacked">
+                            <li><a href="adm-country.htm">Countries</a></li>
+                            <li class="active-menu"><a href="adm-regions.htm">Regions</a></li>
+                            <li><a href="adm-katexc.htm">Excursion categories</a></li>
+                            <li><a href="adm-exc.htm">Excursions</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- правый блок -->
+                    <div class="right-block">
+                        <div class="add-regions">
+                            <div class="header-cont">Select country</div>
+                            <div class="add-status">
+                                <select>
+                                    <option>Not selected</option>
+                                    <option>Thailand</option>
+                                    <option>Russia</option>
+                                </select>
+                            </div>
+                            <div class="header-cont">Title of the region</div>
+                            <div class="add-regions-name">
+                                <div class="name-regions">English</div>
+                                <input type="text" class="name-regions-input" placeholder="Please enter title of the region (English)">
+                            </div>
+                            <div class="add-regions-name">
+                                <div class="name-regions">Russian</div>
+                                <input type="text" class="name-regions-input" placeholder="Please enter title of the region (Russian)">
+                            </div>
+                            <div class="header-cont">Description of the region</div>
+                            <div class="add-regions-name">
+                                <div class="name-regions">English</div>
+                                <textarea class="resize text-a"></textarea>
+                            </div>
+                            <div class="add-regions-name">
+                                <div class="name-regions">Russian</div>
+                                <textarea class="resize text-a"></textarea>
+                            </div>
+                            <div class="header-cont">Photos (Gallery)
+                                <div class="button-head"><button class="btn btn-mini" type="submit">Add photo</button></div>
+                            </div>
+                            <div class="add-regions-foto">
+                                <div class="regions-foto-box">
+                                    <div class="regions-foto-descr"><img class="flag" src="ico/en.png"> ENG</div>
+                                    <input type="text" class="foto-regions-input" placeholder="Please enter description for foto">
+                                    <br />
+                                    <div class="regions-foto-descr"><img class="flag" src="ico/ru.png"> RUS</div>
+                                    <input type="text" class="foto-regions-input" placeholder="Please enter description for foto">
+                                </div>
+                                <div class="regions-foto">
+									<a href="#"><img src="img/adm-foto/01.jpg"></a>
+									<a data-toggle="modal" href="#cancel" class="del-foto del-media">&times;</a>
+								</div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="header-cont">Videos (Right panel)
+                                <div class="button-head"><button class="btn btn-mini" type="submit">Add video</button></div>
+                            </div>
+                            <div class="add-regions-video">It works as a random sequence now</div>
+                            <div class="header-cont">We reccomend (Right panel)
+                                <div class="button-head"><button class="btn btn-mini" type="submit">Add reccomends</button></div>
+                            </div>
+                            <div class="add-regions-rek">It works as a rating sequence now</div>
+                            <div class="header-cont">Moderator comments (Service information)</div>
+                            <div class="add-comment">
+                                <textarea class="resize text-full"></textarea>
+                            </div>
+                            <div class="header-cont">Status of the region</div>
+                            <div class="add-status">
+                                <select>
+                                    <option>For moderation</option>
+                                    <option>Approved</option>
+                                    <option>Failed</option>
+                                </select>
+								<label class="checkbox"><input type="checkbox" value=""> Show on the website</label>
+                            </div>
+                            <div class="header-cont">Recent changes (Service information)</div>
+                            <div class="add-log">
+                                01.01.2013 - Page created - Zhuravlev Alexander<br>
+                                02.01.2013 - Edit description in Russian - Zhuravlev Alexander<br>
+                                02.01.2013 - Add photo - Zhuravlev Alexander<br>
+                                02.01.2013 - Changed status on "Approved" - Zhuravlev Alexander<br>
+                            </div>
+                            <div class="button">
+                                <button class="btn btn-large" type="submit">Cancel</button>
+                                <button class="btn btn-large" type="submit">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <!-- футер -->
+                <div class="footer">
+                    <div class="line"></div>
+                    <div class="text"><a href="http://make.travel/">MAKE.TRAVEL</a>&nbsp;&nbsp;|&nbsp;&nbsp;Professional Travel System&nbsp;&nbsp;©&nbsp;&nbsp;2012 - 2013</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Jquery -->
+        <script src="js/jquery.js"></script>	
+
+        <!-- Выпадающий список -->		
+        <script src="js/bootstrap-dropdown.js"></script>
+
+    </body>
+</html>
